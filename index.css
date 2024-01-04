@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-color: black;
+}
 
 @font-face {
     font-family: 'motiva regular';
@@ -257,6 +260,8 @@ i{
     position: absolute;
     flex-direction: column;
     background-color: var(--account-page-col);
+    /* background: rgb(13,36,95); */
+    background: linear-gradient(110deg, #0D2868 5%, #0B0F20 18%, #15194B 100%);
     opacity: 0.96;
     width: auto;
     height: auto;
@@ -317,7 +322,7 @@ i{
     font-size: var(--nick-font-size);
     cursor: pointer;
 }
-.accountpage .accountpage-items .firstSec .lvl > span
+.accountpage .accountpage-items
 .rounded{
     border: 2px solid var(--text-col);
     border-radius: 50%;
@@ -560,14 +565,94 @@ div{
 }
 
 .accountpage .accountpage-items .secondSec .spart >
-.items .container{
+.items > .container{
     color: var(--col-i);
     font-size: var(--noinfogiven-font-size);
     display: grid;
     gap: 13px;
 }
 .accountpage .accountpage-items .secondSec .spart >
-.items .container span{
+.items > .container span{
     color: var(--recent-activity);
     font-size: 24px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .container p:hover{
+    text-decoration: underline;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .container .Games{
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends{
+    display: grid;
+    gap: 15px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > div:nth-child(1){
+    color: var(--col-i);
+    display: flex;
+    gap: 5px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > div:nth-child(1) > span{
+    color: var(--recent-activity);
+    font-size: 24px;
+    cursor: pointer;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > div:nth-child(1) > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer{
+    border-radius: var(--menu-rounded);
+    cursor: pointer;
+    transition: var(--default-trans);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer .items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 5px 5px 5px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer:hover{
+    background-color: rgba(128, 128, 128, 0.329);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer > .items > .fp{
+    display: flex;
+    gap: 7px;
+}
+
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer > .items > .fp > .pfp{
+    width: 37px;
+    height: 37px;
+    border: 2px solid var(--recent-activity);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer > .items > .fp > .pfp img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer > .items > .fp > .name{
+    color: var(--recent-activity);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.accountpage .accountpage-items .secondSec .spart >
+.items > .friends > .fcontainer > .items > .sp{
+    color: var(--col-i);
 }

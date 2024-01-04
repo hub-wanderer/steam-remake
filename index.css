@@ -420,10 +420,6 @@ div{
     font-size: 14px;
     gap: 7px;
 }
-.accountpage .accountpage-items .secondSec .fpart .gamecontainer
-.items .fp > .fpinside > .gname{
-    /* position: relative; */
-}
 
 .accountpage .accountpage-items .secondSec .fpart .gamecontainer
 .items .fp > .fpinside > .gname > p{
@@ -492,6 +488,32 @@ div{
     height: 12px;
     background-color: #0000004d;
     box-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+}
+
+.accountpage .accountpage-items .secondSec .fpart .wishl{
+    display: flex;
+    justify-content: flex-end;
+}
+.accountpage .accountpage-items .secondSec .fpart .wishl > .items{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: var(--col-i);
+}
+.accountpage .accountpage-items .secondSec .fpart .wishl >
+.items p:nth-child(1),
+.accountpage .accountpage-items .secondSec .fpart .wishl >
+.items p:nth-child(3),
+.accountpage .accountpage-items .secondSec .fpart .wishl >
+.items p:nth-child(5){
+    color: var(--recent-activity);
+    transition: var(--default-trans);
+}
+.accountpage .accountpage-items .secondSec .fpart .wishl >
+.items > .h:hover{
+    color: var(--default-blue);
+    cursor: pointer;
 }
 
 

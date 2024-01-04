@@ -40,8 +40,11 @@ body{
     --default-trans: 0.2s;
 }
 .fs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 6.5em;
+    height: 7em;
     background-color: var(--fs-cl);
     overflow: hidden;
     color: var(--text-col);
@@ -199,7 +202,6 @@ i{
     display: flex;
     gap: 1em;
     margin-left: var(--space-default);
-    margin-top: 13px;
     font-weight: bolder;
     font-size: 18px;
     color: var(--title-col);
@@ -214,17 +216,58 @@ i{
 .ss-items .arrows{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
     color: var(--text-col);
 }
 .ss-items .arrows > i{
-    font-size: 22px;
+    font-size: 20px;
     transition: var(--default-trans);
 }
 .ss-items .arrows > i:hover{
     color: var(--col-i);
 }
-
+.fs > .ths-items{
+    margin-bottom: 8px;
+    margin-left: var(--space-default);
+    color: var(--recent-activity);
+}
+.fs > .ths-items > .items{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.fs > .ths-items > .items > i{
+    transition: var(--default-trans);
+    cursor: pointer;
+}
+.fs > .ths-items > .items > i:hover{
+    color: var(--col-i);
+}
+.fs > .ths-items > .items i{
+    font-size: 13px;
+}
+.fs .ths-items > .items > div{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 14px 5px 14px;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--default-trans);
+}
+.fs .ths-items > .items > div:hover{
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 15px;
+    color: var(--col-i) !important;
+}
+.fs .ths-items > .items > div:hover a{
+    color: var(--col-i);
+}
+.fs .ths-items > .items > div > a{
+    text-decoration: none;
+    color: var(--recent-activity);
+    font-size: 11px;
+}
 
 .secondS{
     position: relative;

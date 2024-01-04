@@ -1,0 +1,573 @@
+*{
+    /* font-family: 'Inter', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'motiva regular';
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'motiva regular';
+    src: url('/fonts/motiva-sans-cufonfonts/MotivaSansRegular.woff.ttf');
+}
+@font-face {
+    font-family: 'motiva medium';
+    src: url('/fonts/motiva-sans-cufonfonts/MotivaSansMedium.woff.ttf');
+}
+:root{
+    --fs-cl: #171d25;
+    --text-col: #adb4c0;
+    --col-i: #ffffff;
+    --title-col: #d3d3d3;
+    --account-page-col: #141a30;
+    --default-blue: #3eaaf7;
+    --game-containers: rgba( 0, 0, 0, 0.3 );
+    --recent-activity: #63646b;
+    --vac-color: #a94847;
+
+    --noinfogiven-font-size: 14px;
+    --nick-font-size: 23px;
+    --recent-activity-font-size: 20px;
+
+    --menu-rounded: 3px;
+    --menu-height: 25px;
+
+    --space-default: 30px;
+
+    --default-trans: 0.2s;
+}
+.fs{
+    width: 100%;
+    height: 6.5em;
+    background-color: var(--fs-cl);
+    overflow: hidden;
+    color: var(--text-col);
+    font-size: smaller;
+    -webkit-box-shadow: 1px 7px 5px 0px rgba(34, 60, 80, 0.19);
+    -moz-box-shadow: 1px 7px 5px 0px rgba(34, 60, 80, 0.19);
+    box-shadow: 1px 7px 5px 0px rgba(34, 60, 80, 0.19);
+}
+i{
+    font-size: 15.5px;
+}
+.fs .fs-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.fs .fl{
+    display: flex;
+    gap: 1em;
+    margin-left: var(--space-default);
+    
+}
+.fs .fl span{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    transition: var(--default-trans);
+}
+.fs .fl span:hover{
+    color: var(--col-i);
+    cursor: pointer;
+}
+.fs .fl p{
+    transition: var(--default-trans);
+}
+.fs .fl p:hover{
+    color: var(--col-i);
+    cursor: pointer;
+}
+
+
+.fs .sl{
+    display: flex;
+    gap: 25px;
+    margin-right: var(--space-default);
+}
+.fs .sl .slf{
+    display: flex;
+    gap: 9px;
+}
+
+.fs .sl .news{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 47px;
+    height: var(--menu-height);
+    border-radius: 3px;
+    background-color: #1999ff;
+    transition: var(--default-trans);
+}
+.fs .sl .news:hover{
+    background-color: #50b0ff;
+    cursor: pointer;
+}
+.fs .sl .news i{
+    position: absolute;
+    color: var(--col-i);
+}
+.fs .sl .notif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 47px;
+    height: var(--menu-height);
+    border-radius: var(--menu-rounded);
+    background-color: #5c7e10;
+    transition: var(--default-trans);
+}
+.fs .sl .notif:hover{
+    background-color: #81b316;
+    cursor: pointer;
+}
+.fs .sl .notif i{
+    position: absolute;
+    color: var(--col-i);
+}
+
+.user{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: auto;
+    height: var(--menu-height);
+    background-color: #272d37;
+    border-radius: var(--menu-rounded);
+    transition: var(--default-trans);
+}
+.user:hover{
+    cursor: pointer;
+    background-color: #3eaaf74f;
+}
+.user .pfp{
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.user .pfp > img{
+    object-fit: cover;
+    width: 90%;
+    height: 90%;
+    border-right: 2px solid var(--default-blue);
+}
+.user .nickprice{
+    display: flex;
+    gap: 6px;
+    margin-right: 6px;
+}
+.user .nickprice p:first-child{
+    color: var(--default-blue);
+}
+
+.fs .sl .sls{
+    display: flex;
+    align-items: center;
+}
+.fs .sl .sls > div{
+    height: var(--menu-height);
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--menu-rounded);
+    transition: var(--default-trans);
+}
+.fs .sl .sls > div:first-child i{
+    margin-bottom: 12px;
+}
+
+.fs .sl .sls div:nth-child(1):hover,
+.fs .sl .sls div:nth-child(2):hover
+{
+    background-color: #31363d;
+}
+.fs .sl .sls div:nth-child(3):hover{
+    background-color: #f72e2e;
+}
+
+
+.ss-items{
+    display: flex;
+    gap: 1em;
+    margin-left: var(--space-default);
+    margin-top: 13px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: var(--title-col);
+    cursor: pointer;
+}
+.ss-items p{
+    transition: var(--default-trans);
+}
+.ss-items > p:hover{
+    color: var(--col-i);
+}
+.ss-items .arrows{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-col);
+}
+.ss-items .arrows > i{
+    font-size: 22px;
+    transition: var(--default-trans);
+}
+.ss-items .arrows > i:hover{
+    color: var(--col-i);
+}
+
+
+.secondS{
+    position: relative;
+    min-width: 950px;
+}
+.secondS .animatedbg{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    width: 50%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+.secondS .animatedbg > video{
+    object-fit: cover;
+    width: 100%;
+    height: 60em;
+    z-index: -1;
+}
+
+
+.accountpage{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    max-height: 100%;
+}
+.accountpage .accountpage-items{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--account-page-col);
+    opacity: 0.96;
+    width: auto;
+    height: auto;
+}
+.accountpage .accountpage-items .firstSec{
+    display: flex;
+    gap: 18em;
+    margin: 40px 23px 40px 23px;
+    color: var(--title-col);
+}
+.accountpage .accountpage-items .firstSec .fpart{
+    display: flex;
+    gap: 50px;
+}
+.accountpage .accountpage-items .firstSec > .fpart
+.avatar
+> .container
+{
+    width: 164px;
+    height: 164px;
+    border: 4px solid black;
+}
+.accountpage .accountpage-items .firstSec 
+.avatar
+.container > img
+{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.accountpage .accountpage-items .firstSec .nickinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+.accountpage .accountpage-items .firstSec .nickinfo > span{
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+    cursor: pointer;
+}
+.accountpage .accountpage-items .firstSec .nickinfo > span > p{
+    font-size: var(--nick-font-size);
+    cursor: default;
+}
+.accountpage .accountpage-items .firstSec .nickinfo > p{
+    font-size: var(--noinfogiven-font-size);
+}
+
+.accountpage .accountpage-items .firstSec .spart .lvl{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.accountpage .accountpage-items .firstSec .lvl > span{
+    display: flex;
+    gap: 7px;
+    font-size: var(--nick-font-size);
+    cursor: pointer;
+}
+.accountpage .accountpage-items .firstSec .lvl > span
+.rounded{
+    border: 2px solid var(--text-col);
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accountpage .accountpage-items .firstSec .lvl > span
+.rounded > p{
+    font-size: 16px;
+}
+
+.accountpage .accountpage-items .firstSec .lvl .container{
+    background-color: #0b0d1e;
+    border-radius: var(--menu-rounded);
+}
+.accountpage .accountpage-items .firstSec .lvl .container > p{
+    margin: 10px 10px 30px 10px;
+    font-size: var(--noinfogiven-font-size);
+}
+.accountpage .accountpage-items .firstSec .lvl .container > p
+> span{
+    color: var(--col-i);
+    cursor: pointer;
+}
+.accountpage .accountpage-items .firstSec .lvl .container > p
+> span:hover{
+    color: var(--default-blue);
+}
+.accountpage .accountpage-items .firstSec .lvl > a{
+    text-decoration: none;
+    color: var(--title-col);
+    background-color: #262444;
+    width: 105.7px;
+    border-radius: var(--menu-rounded);
+    transition: var(--default-trans);
+}
+.accountpage .accountpage-items .firstSec .lvl > a:hover{
+    background-color: #424061;
+}
+.accountpage .accountpage-items .firstSec .lvl > a p{
+    margin: 7px 12px 7px 12px;
+}
+
+
+.accountpage .accountpage-items .secondSec{
+    display: flex;
+    gap: 2.2em;
+    margin: 23px 23px;
+}
+.accountpage .accountpage-items .secondSec .fpart{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: auto;
+}
+.accountpage .accountpage-items .secondSec .fpart .recentAct{
+    background-color: var(--game-containers);
+    border-radius: var(--menu-rounded);
+    width: auto;    
+}
+.accountpage .accountpage-items .secondSec .fpart .recentAct >
+div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+    color: var(--recent-activity);
+    font-size: var(--recent-activity-font-size);
+}
+
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer{
+    background-color: var(--game-containers);
+    border-radius: var(--menu-rounded);
+    color: var(--title-col);
+    width: auto;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+> .items{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp{
+    display: flex;
+    justify-content: space-between;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside{
+    display: flex;
+    position: relative;
+    font-size: 14px;
+    gap: 7px;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside > .gname{
+    /* position: relative; */
+}
+
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside > .gname > p{
+    margin-top: 10px;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside > .gname > p:hover{
+    cursor: pointer;
+    color: var(--default-blue);
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside > .phcon{
+    border-radius: var(--menu-rounded);
+    cursor: pointer;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .fpinside > .phcon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .fp > .spinside{
+    display: flex;
+    align-items: flex-end;
+    font-size: 13px;
+    color: var(--recent-activity);
+}
+
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp{
+    display: flex;
+    background-color: #0a0f22;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp{
+    display: flex;
+    background-color: #0a0f22;
+    border-radius: var(--menu-rounded);
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp > .items{
+    display: flex;
+    gap: 7px;
+    font-size: 13px;
+    margin: 15px 7px 15px 7px;
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp > .items > .spinside{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp > .items > .spinside > p:first-child{
+    color: var(--recent-activity);
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp > .items > .spinside > div{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1px;
+    border: 1px solid #00000080;
+    width: 149px;
+    height: 12px;
+    background-color: #0000004d;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+}
+
+
+.accountpage .accountpage-items .secondSec > .spart {
+    background-color: var(--game-containers);
+    border-radius: var(--menu-rounded);
+    width: 18.5em;
+    line-height: 22px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    margin: 15px 10px 15px 10px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .onof{
+    font-size: var(--recent-activity-font-size);
+    color: #57cbde;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .vacban{
+    font-size: 13.4px;
+}   
+.accountpage .accountpage-items .secondSec .spart >
+.items .vacban > p{
+    color: var(--vac-color);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .vacban a{
+    text-decoration: none;
+    color: var(--col-i);
+    transition: var(--default-trans);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .vacban a:hover{
+    color: var(--default-blue);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--noinfogiven-font-size);
+    gap: 11px;
+    color: var(--col-i);
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges div:nth-child(1){
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges div:nth-child(1) p:hover{
+    text-decoration: underline;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges span{
+    color: var(--recent-activity);
+    font-size: 24px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges > .bimgs{
+    display: flex;
+    gap: 15px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .Badges > .bimgs img{
+    cursor: pointer;
+}
+
+.accountpage .accountpage-items .secondSec .spart >
+.items .container{
+    color: var(--col-i);
+    font-size: var(--noinfogiven-font-size);
+    display: grid;
+    gap: 13px;
+}
+.accountpage .accountpage-items .secondSec .spart >
+.items .container span{
+    color: var(--recent-activity);
+    font-size: 24px;
+}

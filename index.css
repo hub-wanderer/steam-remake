@@ -524,6 +524,7 @@ div{
 .accountpage .accountpage-items .secondSec .fpart .gamecontainer
 .items .sp > .items > .spinside > div{
     display: inline-block;
+    position: relative;
     border-radius: 5px;
     padding: 1px;
     border: 1px solid #00000080;
@@ -531,6 +532,14 @@ div{
     height: 12px;
     background-color: #0000004d;
     box-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+}
+.accountpage .accountpage-items .secondSec .fpart .gamecontainer
+.items .sp > .items > .spinside > div .progbar{
+    /* position: absolute; */
+    background-color: #364359;
+    height: 12px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .3) 0%, rgba(34, 32, 61, 0.93) 80%);
 }
 
 .accountpage .accountpage-items .secondSec .fpart .wishl{
